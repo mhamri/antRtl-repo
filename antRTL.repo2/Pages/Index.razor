@@ -1,0 +1,20 @@
+﻿@page "/"
+@inject ConfigProvider _configProvider      
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<p>@_configProvider.Direction</p>
+
+<div>
+    <Input Placeholder="Basic usage" @bind-Value="@txtValue"  />
+    <br />
+    <br />
+    <Text>@txtValue</Text>
+</div>
+@code{
+    string txtValue { get; set; }
+
+
+}
